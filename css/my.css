@@ -1,0 +1,76 @@
+/* sets jumbotron background and text color */
+.jumbotron {
+    background-color: aqua;
+    color: navy;
+}
+
+/* sets up background color for the whole page */
+body {
+    background-color: antiquewhite;
+}
+
+/* makes the horizontal line more visible */
+hr {
+    border: solid;
+    border-width: 1px;
+}
+
+/* makes borders between each table element, centers them, and makes the background color aqua */
+tr,
+td,
+#multTable {
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    text-align: center;
+    background-color: aqua;
+}
+
+/* div id for the table and set the maximum height and width, white centering the table, also sets up the table to be scrollable */
+#tab {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    max-width: 80%;
+    max-height: 500px;
+}
+
+/* targets first row and first column and makes their text bold, changes their background color to white, positon sticky 
+to always show both while scrolling so a user knows what the multiplier and multiplicand are
+*/
+#multTable td:first-child,
+#multTable tr:first-child td {
+    background-color: white;
+    font-weight: bold;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+/* sets padding around each table element */
+#multTable td,
+#multTable tr {
+    padding: 6px;
+    box-sizing: border-box;
+}
+
+/* Makes the table scrollable */
+table {
+    margin-top: 25px;
+    display: inline-block;
+    overflow: auto;
+    border-collapse: collapse;
+}
+
+/* helps with making the table scrollabe */
+td div {
+    margin-top: -20px;
+    position: absolute;
+}
+
+/* makes every odd column a beigh background color*/
+td:nth-child(odd) {
+    background-color: beige;
+}
